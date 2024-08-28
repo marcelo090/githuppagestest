@@ -35,6 +35,10 @@ header {
     justify-content: space-between;
 }
 
+#menu-toggle{
+    opacity: 0;
+}
+
 nav {
     display: flex;
     justify-content: flex-start;
@@ -120,7 +124,10 @@ section {
     overflow: hidden;
     padding: 0;
     background-image: url(picture/fondo2.png);
-    background-size:auto;
+    right: 0;
+    left: 0;
+    background-color: #000000;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 10;
@@ -132,9 +139,9 @@ section {
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
-    width: 30%; /* Ocupa el ancho total de la sección */
+    width: 20%; /* Ocupa el ancho total de la sección */
     height: 100%; /* Ajusta la altura según lo necesites */
-    background-color: rgb(0, 0, 0, 0.5); /* Color y opacidad de la forma */
+    background-color: rgb(0, 0, 0, 0); /* Color y opacidad de la forma */
     position: absolute;
     bottom: 0; /* Posiciona la forma en la parte inferior de la sección */
     right: 0;
@@ -147,10 +154,10 @@ section {
     position: relative;
     
     z-index: 15; /* Asegura que el texto esté por encima de la forma */
-    padding: 40px 30px;
+    padding: 20px 30px;
     font-family: Monserrat, sans-serif;
     font-size: 1.5rem;
-    width: 50%;
+    width: 40%;
     background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para efecto de tarjeta */
     border-radius: 20px; /* Bordes redondeados */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para efecto de elevación */
@@ -190,9 +197,9 @@ section {
 #flota {
   
         position: absolute;
-        top: 100px; /* Ajusta según necesites */
-        left: 50%; /* Ajusta según necesites */
-        transform: translateX(-40%) scale(1.2); /* Escala la imagen y la centra horizontalmente */
+        bottom: -220px; /* Ajusta según necesites */
+        right: -100; /* Ajusta según necesites */
+        transform: translateX(50) scale(1); /* Escala la imagen y la centra horizontalmente */
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* Recorta la imagen según necesites */
         z-index: 10;
     }
@@ -617,6 +624,7 @@ section {
 
 #Contacto {
     background-color: #e6e6e6;
+  
 }
 
 .contacto-container {
@@ -624,6 +632,7 @@ section {
     align-items: center;
     justify-content: center; /* Centra el contenido horizontalmente */
     flex-direction: row;
+    width: 80%;
     background: linear-gradient(135deg, #ffcc00, #f0f0f0); /* Gradiente de amarillo a gris claro */
     padding: 50px 50px 50px 50;
     padding-left: 30px;
@@ -792,7 +801,7 @@ footer {
     position: fixed;
     bottom: 20px; /* Distancia desde el borde inferior */
     right: 20px; /* Distancia desde el borde derecho */
-    background-color: #25D366; /* Color verde característico de WhatsApp */
+    background-color: #feec47; /* Color verde característico de WhatsApp */
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -806,11 +815,434 @@ footer {
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E; /* Color verde oscuro cuando el mouse pasa sobre el botón */
+    background-color: #ffffff; /* Color verde oscuro cuando el mouse pasa sobre el botón */
 }
 
 .whatsapp-button:active {
-    background-color: #075E54; /* Color aún más oscuro cuando se hace clic en el botón */
+    background-color: #ebff12; /* Color aún más oscuro cuando se hace clic en el botón */
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    #menu-toggle{
+        opacity: 1;
+    }
+
+
+
+    nav {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(4px);
+        border-radius: 5px;
+        display: none; /* Inicialmente oculto */
+        flex-direction: column;
+        width: 150px;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Botón para mostrar el menú */
+    #menu-toggle {
+        position: absolute;
+        top: 30%;
+        right: 20%;
+        cursor: pointer;
+        font-size: 24px;
+        color: #000000;
+    }
+
+    /* Mostrar menú al hacer clic en el botón */
+    #menu-toggle.active + nav {
+        display: flex;
+    }
+
+
+/*Section 1 telefono*/
+
+#Inicio {
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    justify-content: center;
+    align-items:center;
+    padding: 0;
+    background-image: url(picture/fondo2.png);
+    right: 0;
+    left: 0;
+    background-color: #000000;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    padding-left: 20%;
+    
+}
+
+#inicio-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 0%;
+    left: 0%;
+    height: 500px;
+    width: 80vh;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para efecto de tarjeta */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para efecto de elevación */
+    backdrop-filter: blur(10px); /* Desenfoque de fondo */
+    text-align: center; /* Centra el texto */
+}
+
+#forma {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    width: 20%; /* Ocupa el ancho total de la sección */
+    height: 100%; /* Ajusta la altura según lo necesites */
+    background-color: rgb(0, 0, 0, 0); /* Color y opacidad de la forma */
+    position: absolute;
+    bottom: 0; /* Posiciona la forma en la parte inferior de la sección */
+    right: 0;
+    z-index: 15; /* Asegura que la forma esté por debajo del texto */
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 55% 0);
+}
+
+
+
+#logo-inicio {
+    height: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+
+
+#flota {
+       position: absolute;
+       width: 30%;
+    }
+
+
+
+
+
+/*Sección 2 quienes somos*/
+
+
+
+
+
+
+
+#QuienesSomos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    position: relative;
+    overflow: visible;
+}
+
+#quienes-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px; /* Añade un margen inferior para separar el título del texto */
+    color: #333;
+    z-index: 5;
+    position: relative;
+    width: 100%; /* Asegura que el título esté centrado horizontalmente */
+}
+
+#quienes {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555;
+    line-height: 1.6;
+    z-index: 5;
+    padding: 30px;
+    padding-top: 300px;
+    background: rgba(255, 232, 22, 0.889);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#quienes-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #333;
+    position: absolute;
+    top: 10%;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#Trabaja {
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+/*nuestros servicios*/
+
+
+.services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle-container {
+    position: relative;
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    transition: transform 0.5s ease;
+    z-index: 20;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    border: 18px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: #333;
+    box-shadow: 
+        0 15px 30px rgba(0,0,0,0.19), 
+        0 9px 9px rgba(0,0,0,0.23),
+        inset 0 0 30px rgba(0,0,0,0.1);
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.circle:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0.7;
+}
+
+.circle-content {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    font-family: BONN;
+    transition: opacity 0.3s ease;
+}
+
+.circle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.info-card {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 22px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 15;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.19), 0 9px 9px rgba(0,0,0,0.23);
+}
+
+.info-card.expanded {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    transform: translateX(-50%) translateY(30px);
+}
+
+.expanded-text {
+    font-family: Poppins;
+    font-size: 18px;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 22px;
+}
+
+.expanded-title {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.cards-container {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideCardsVertical 30s linear infinite;
+    z-index: 10;
+}
+
+.cards-container:hover {
+    animation-play-state: paused;
+}
+
+.card {
+    width: 220px;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+}
+
+.card:hover::before {
+    background: rgba(52, 152, 219, 0.7);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+@keyframes slideCardsVertical {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+
+
+
+/* Tarjeta contacto*/
+
+@media (max-width: 768px) {
+    .contacto-container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        padding: 30px;
+        width: 90%;
+    }
+
+    .mapa-container {
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade espacio debajo del mapa */
+        width: 100%; /* Asegura que el mapa ocupe el ancho completo */
+        order: 1; /* Mueve el mapa antes del formulario */
+    }
+
+    .formulario-contacto {
+        margin-left: 0;
+        width: 100%; /* Asegura que el formulario ocupe el ancho completo */
+        order: 2; /* Mueve el formulario después del mapa */
+    }
+}
+
+
+/*footer*/
+
+
+
+
+}
