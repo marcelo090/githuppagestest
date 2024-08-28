@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+      <div id="menu-toggle">☰</div>
         <nav class="floating-menu">
             <ul>
                 <li><a href="#Inicio">INICIO</a></li>
@@ -44,12 +45,12 @@
             <div class="recommendation-card">
                 <img src="picture/perfil hombre.webp" alt="Cliente 1">
                 <p>"Excelente servicio, siempre puntuales y muy profesionales."</p>
-                <h4>Juan Pérez</h4>
+                <h4>Pedro Araujo</h4>
             </div>
             <div class="recommendation-card">
                 <img src="picture/perfil mujer.webp" alt="Cliente 2">
                 <p>"Los materiales que proveen son de la mejor calidad, muy recomendados."</p>
-                <h4>Ana Gómez</h4>
+                <h4>Amelia Perez</h4>
             </div>
         </div>
         <h2 id="Trabaja">Trabajan con nosotros</h3>
@@ -210,19 +211,19 @@
             <div class="footer-social">
                 <h2>Síguenos</h2>
                 <a href="https://www.instagram.com/tu_perfil" target="_blank" class="social-icon">
-                    <img src="path/to/instagram-icon.png" alt="Instagram">
+                    <img src="https://img.icons8.com/?size=100&id=RhYNENh5cxlS&format=png&color=000000" alt="Instagram">
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=100071519381112" target="_blank" class="social-icon">
-                    <img src="path/to/facebook-icon.png" alt="Facebook">
+                    <img src="https://img.icons8.com/?size=100&id=kQzCK4emnaD2&format=png&color=000000" alt="Facebook">
                 </a>
                 <a href="https://wa.me/2616660415" target="_blank" class="social-icon">
-                    <img src="path/to/whatsapp-icon.png" alt="WhatsApp">
+                    <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=000000" alt="WhatsApp">
                 </a>
             </div>
         </div>
     </footer>
     <a href="https://wa.me/2616660415" class="whatsapp-button" target="_blank" title="Contáctanos por WhatsApp">
-        <img src="picture/icons8-whatsapp-80.png" alt="WhatsApp" />
+        <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=000000" alt="WhatsApp" />
     </a>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -236,6 +237,19 @@
     </script>
 
     
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('nav').classList.toggle('active');
+});
+
+</script>
+
+
+
+
+
+
 
 </body>
 </html>
